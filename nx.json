@@ -19,12 +19,21 @@
     }
   },
   "projects": {
+    "libtest": {
+      "tags": []
+    },
     "mob": {
       "tags": []
     },
     "mob-e2e": {
       "tags": [],
       "implicitDependencies": ["mob"]
+    },
+    "moblib-nativescript": {
+      "tags": []
+    },
+    "nativescript-mobile": {
+      "tags": []
     }
   }
 }

@@ -4,7 +4,8 @@
   "license": "MIT",
   "scripts": {
     "nx": "nx",
-    "start": "nx serve",
+    "serve web": "node renamer web && nx serve",
+    "serve mob:android": "node renamer mob && npx nx run nativescript-mobile:android",
     "build": "nx build",
     "test": "nx test",
     "lint": "nx workspace-lint && nx lint",
@@ -39,7 +40,10 @@
     "@nrwl/angular": "12.4.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
-    "zone.js": "~0.11.4"
+    "zone.js": "^0.11.4",
+    "@nativescript/core": "~8.1.0",
+    "nativescript-theme-core": "~1.0.4",
+    "@nativescript/angular": "^12.0.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^12.0.0",
@@ -48,6 +52,7 @@
     "@angular-eslint/template-parser": "~12.0.0",
     "@angular/compiler-cli": "^12.0.0",
     "@angular/language-service": "^12.0.0",
+    "@nativescript/nx": "^2.0.7",
     "@nrwl/cli": "12.4.0",
     "@nrwl/cypress": "12.4.0",
     "@nrwl/eslint-plugin-nx": "12.4.0",
@@ -69,6 +74,14 @@
     "prettier": "2.2.1",
     "ts-jest": "27.0.3",
     "ts-node": "~9.1.1",
-    "typescript": "~4.2.4"
+    "typescript": "~4.2.4",
+    "sass": "^1.32.0",
+    "@nativescript/webpack": "~5.0.0",
+    "@nativescript/types": "~8.1.0",
+    "@ngtools/webpack": "^12.0.0"
+  },
+  "nativescript-nx": {
+    "prefix": "",
+    "framework": "angular"
   }
 }

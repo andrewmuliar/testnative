@@ -1,3 +1,7 @@
 module.exports = {
-  projects: ['<rootDir>/apps/mob'],
+  projects: [
+    '<rootDir>/apps/mob',
+    '<rootDir>/libs/libtest',
+    '<rootDir>/libs/moblib-nativescript',
+  ],
 };

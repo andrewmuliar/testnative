@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@test/libtest": ["libs/libtest/src/index.ts"],
+      "@test/moblib-nativescript": ["libs/moblib-nativescript/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
