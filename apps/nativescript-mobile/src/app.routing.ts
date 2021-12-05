@@ -4,24 +4,19 @@ import { Routes } from '@angular/router';
 
 // nativescript
 import { NativeScriptRouterModule } from '@nativescript/angular';
+import { CategoryComponent } from './category/category-list.component';
 
 // app
 import { SharedModule } from './features/shared/shared.module';
-
+import { ProductComponent } from './product/product.component';
 const routes: Routes = [
-  {
-    path: '',
-    redirectTo: '/home',
-    pathMatch: 'full'
-  },
-  {
-    path: 'home',
-    loadChildren: () => 
-      import('./features/home/home.module').then(m => m.HomeModule)
-  }
-];
+  { path: '', redirectTo: '/category', pathMatch: 'full' },
+  { path: 'category', component: CategoryComponent },
+  { path: 'category/:category_id', component: ProductComponent },
+]
 
 @NgModule({
-  imports: [SharedModule, NativeScriptRouterModule.forRoot(routes)]
+  imports: [SharedModule, NativeScriptRouterModule.forRoot(routes)],
+  exports: [NativeScriptRouterModule],
 })
 export class AppRoutingModule {}

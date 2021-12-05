@@ -1,0 +1,8 @@
+<ActionBar title="Categories"></ActionBar>
+<StackLayout style = "background:yellow;">
+    <StackLayout class = "animate" *ngFor = "let product of products" marginBottom = "25" marginTop = "25">
+      <Label style = "font-weight: bold;" textAlignment = "center" al class="h2" [text]="product.product_name + '. '"></Label>
+      <Label textAlignment = "center" class="h2" [text]="product.description + '. '"></Label>
+      <Image *ngFor = "let photos of product.photos" style = "width:75%; border-radius: 15px; border:1px solid black;" [src] = "photos"></Image>
+    </StackLayout>
+</StackLayout>
